@@ -8,6 +8,8 @@ import { DrawerHostComponent } from '../drawer-host/drawer-host.component';
 })
 export class DrawerComponent implements AfterViewInit{
 
+
+  // drawerHost: DrawerHostComponent | undefined;
   constructor(private drawerHost: DrawerHostComponent) { }
 
   @ViewChild('drawerTemplate', {static: true}) drawerTemplate: TemplateRef<HTMLElement> | undefined;
@@ -17,10 +19,10 @@ export class DrawerComponent implements AfterViewInit{
       return;
     }
 
-    this.drawerHost.setTemplate(this.drawerTemplate);
+    this.drawerHost?.setTemplate(this.drawerTemplate);
   }
 
   toggle(): void{
-    this.drawerHost.toggle();
+    this.drawerHost?.toggle();
   }
 }
