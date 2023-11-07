@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-drawer-host',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./drawer-host.component.scss']
 })
 export class DrawerHostComponent {
+
+  drawerTemplate$ = new BehaviorSubject<TemplateRef<HTMLElement> | null>(null);
 
 }

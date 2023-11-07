@@ -1,5 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 import { DrawerHostComponent } from './drawer-host/drawer-host.component';
 
 
@@ -9,7 +11,8 @@ import { DrawerHostComponent } from './drawer-host/drawer-host.component';
     DrawerHostComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatSidenavModule,
   ],
   exports: [
     DrawerHostComponent

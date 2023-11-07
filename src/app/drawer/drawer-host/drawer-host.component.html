@@ -1,1 +1,9 @@
-<p>drawer-host works!</p>
+<mat-drawer-container>
+  <mat-drawer>
+    <ng-template [ngTemplateOutlet]="drawerTemplate$ | async"></ng-template>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <ng-content></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>
